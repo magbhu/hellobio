@@ -4,7 +4,7 @@ import plotly.express as px
 
 # --- Configuration ---
 st.set_page_config(
-    page_title="Security Banking Stocks Dashboard",
+    page_title="Personal Stocks Dashboard - OrchidLab",
     page_icon="📈",
     layout="wide"
 )
@@ -12,7 +12,8 @@ st.set_page_config(
 # --- Load Data (CSV or JSON) ---
 @st.cache_data # Cache the data loading for performance
 def load_data(file_path, file_type):
-    df = pd.read_json('stocks.json')
+    #df = pd.read_json('stocks.json')
+    df = pd.read_csv('stocks.csv')
     # Calculate derived metrics
     df['market_value'] = df['quantity'] * df['ltp']
     df['gain_loss'] = (df['ltp'] - df['average_cost_price']) * df['quantity']
@@ -42,8 +43,8 @@ else:
 
 
 # --- Dashboard Layout ---
-st.title("💰 Security Banking Stocks Portfolio Dashboard")
-st.markdown("An interactive dashboard to visualize your banking stock holdings.")
+st.title("💰 Stocks Portfolio Dashboard - OrchidLab")
+st.markdown("An interactive dashboard to visualize your stock holdings.")
 
 if not data_source_df.empty:
     # --- Key Metrics ---
