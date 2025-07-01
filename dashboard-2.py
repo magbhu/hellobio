@@ -11,17 +11,8 @@ st.set_page_config(
 
 # --- Load Data (CSV or JSON) ---
 @st.cache_data # Cache the data loading for performance
-    def load_data(file_path, file_type):
-    #df = pd.read_csv('stocks.csv')
+def load_data(file_path, file_type):
     df = pd.read_json('stocks.json')
-#    if file_type == 'csv':
-#        df = pd.read_csv(file_path)
-#    elif file_type == 'json':
-#        df = pd.read_json(file_path)
-#    else:
-#        st.error("Unsupported file type. Please use 'csv' or 'json'.")
-#        return pd.DataFrame() # Return empty DataFrame on error
-
     # Calculate derived metrics
     df['market_value'] = df['quantity'] * df['ltp']
     df['gain_loss'] = (df['ltp'] - df['average_cost_price']) * df['quantity']
