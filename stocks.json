@@ -1,0 +1,32 @@
+[
+    {
+        "stock_code": "HDFC Bank",
+        "quantity": 100,
+        "average_cost_price": 1500.00,
+        "ltp": 1650.50
+    },
+    {
+        "stock_code": "ICICI Bank",
+        "quantity": 50,
+        "average_cost_price": 900.00,
+        "ltp": 1020.75
+    },
+    {
+        "stock_code": "Axis Bank",
+        "quantity": 75,
+        "average_cost_price": 800.00,
+        "ltp": 780.20
+    },
+    {
+        "stock_code": "SBI",
+        "quantity": 200,
+        "average_cost_price": 600.00,
+        "ltp": 630.10
+    },
+    {
+        "stock_code": "Kotak Mahindra Bank",
+        "quantity": 30,
+        "average_cost_price": 1800.00,
+        "ltp": 1750.00
+    }
+]
